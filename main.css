@@ -8,6 +8,11 @@ h3 {
 	font-family: 'Gafata', sans-serif;
 }
 
+h4 {
+  font-size: 16pt;
+  font-family: 'Gafata', sans-serif;
+}
+
 .topbody {
   position: relative;
   width: 100%;
@@ -29,6 +34,26 @@ h3 {
   font-size: 5em;
   color: white;
   font-family: 'Andada', serif;
+  cursor: hand;
+}
+
+.btn {
+  position: absolute;
+  border-radius: 40px;
+  border-width: 2px;
+  border-color: white;
+  font-family: 'Gafata', sans-serif;
+  color: white;
+  font-size: 32px;
+  padding: 0px 10px 0px 10px;
+  background: transparent;
+  right: -60;
+  top: 20;
+  cursor: hand;
+}
+
+.btn:hover {
+  opacity: 0.7;
 }
 
 #wrap {
@@ -53,26 +78,20 @@ input[type="text"] {
   color: rgb(255,255,255);
   padding: 3px;
   padding-right: 60px;
-  width: 0px;
   position: absolute;
   top: 0;
   right: 0;
   background: none;
-  z-index: 3;
-  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-  cursor: pointer;
-}
-
-input[type="text"]:focus {
   width: 90%;
   text-align: center;
   z-index: 1;
   border-bottom: 3px solid #FFF;
   cursor: text;
 }
+
 input[type="submit"] {
-  height: 67px;
-  width: 63px;
+  width: 30px;
+  height: 30px;
   display: inline-block;
   color:red;
   float: right;
@@ -82,26 +101,32 @@ input[type="submit"] {
   border: none;
   position: absolute;
   top: 20;
-  right: 0;
+  right: 10;
   z-index: 2;
   cursor: pointer;
-  opacity: 0.8;
   cursor: pointer;
   transition: opacity .4s ease;
 }
 
 input[type="submit"]:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .mainbody {
   vertical-align:middle;
-  background: -webkit-radial-gradient(rgb(143, 170, 220) 15%, rgba(0,0,0,0) 16%), -webkit-radial-gradient(rgb(143, 170, 220) 15%, rgba(0,0,0,0) 16%), rgb(255, 255, 255);
-  background: -moz-radial-gradient(rgb(143, 170, 220) 15%, rgba(0,0,0,0) 16%), -moz-radial-gradient(rgb(143, 170, 220) 15%, rgba(0,0,0,0) 16%), rgb(255, 255, 255);
   background: radial-gradient(rgb(143, 170, 220) 15%, rgba(0,0,0,0) 16%), radial-gradient(rgb(143, 170, 220) 15%, rgba(0,0,0,0) 16%), rgb(255, 255, 255);
   background-position: 0 0, 5px 5px;
   background-size: 10px 10px;
   height: 60%;
+}
+
+#by_ {
+  position: absolute;
+  font-size: 16pt;
+  font-family: 'Gafata', sans-serif;
+  text-align: center;
+  margin-left: 50%;
+  transform: translate(-50%,0);
 }
 
 .container {
@@ -168,7 +193,7 @@ input[type="submit"]:hover {
 	filter: blur(2px);
 }
 
-.blurContainer>h2,.blurContainer>h3 {
+.blurContainer>h2,.blurContainer>h3,.blurContainer>h4 {
 	position:relative;
 	z-index: 1;
 }
@@ -180,6 +205,14 @@ input[type="submit"]:hover {
 
 .titleTextBlack {
 	color: rgb(0,0,0);
+}
+
+.dateTextWhite {
+  color: rgb(255,255,255);
+}
+
+.dateTextBlack {
+  color: rgb(0,0,0);  
 }
 
 ::-webkit-scrollbar {

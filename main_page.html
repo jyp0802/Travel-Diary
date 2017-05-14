@@ -7,17 +7,18 @@
 		<link href="https://fonts.googleapis.com/css?family=Gafata" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 		<link rel="stylesheet" href="main.css">
-	</head>
+	</head> 
 
 	<body>
 
 		<div class="topbody">
-      <img class="topbody__background" src="v.jpg">
-      <h1 class="topbody__title">Travel Diary</h1>
+      <img class="topbody__background" src="background.jpg">
+      <h1 class="topbody__title" onclick="refreshPage()">Travel Diary</h1>
       <div id="wrap">
-  			<form action="" autocomplete="on">
+  			<form id="searchForm" autocomplete="on">
  			 		<input id="search" name="search" type="text" placeholder="search for travel">
- 			 		<input id="search_submit" type="submit">
+ 			 		<input id="search_submit" type="submit" onclick="searchImage()">
+          <button onclick="createNew()" class="btn" type="button">+</button>
   			</form>
 			</div>
     </div>
@@ -25,50 +26,74 @@
 		<div class = "mainbody">
 			<div class = "container">
 
-			<script type="text/javascript">
-				function mf(div) {
-					var url = "map_page.html?country=" + div.children[1].innerHTML + "&city=" + div.children[2].innerHTML;
-					window.location = url;
-				}
-			</script>
+  			<script type="text/javascript">
+          function searchImage() {
+            var a = document.getElementById("searchForm");
+            var url = "https://www.google.com/search?tbm=isch&q=" + a.elements[0].value;
+            window.open(url);
+          } 
 
-      <div id="Korea" onclick="mf(this)" class="blurContainer">
-        <div class = "busan blurBackground"></div>
-			  <h2 class="titleTextWhite">KOREA</h2>
-        <h3 class="titleTextWhite">Busan</h3>
-      </div>
+  				function mf(div) {
+  					var url = "map_page.html?country=" + div.children[1].innerHTML + "&city=" + div.children[2].innerHTML;
+  					window.location = url;
+  				}
 
-      <div id="USA" onclick="mf(this)" class = "blurContainer">
-        <div class = "losangeles blurBackground"></div>
-        <h2 class = "titleTextBlack">USA</h2>
-        <h3 class = "titleTextBlack">Los Angeles</h3>
-      </div>
+          function createNew() {
+            window.location = "create_page.html";
+          }
 
-      <div id="Japan" onclick="mf(this)" class = "blurContainer">
-        <div class = "hokkaido blurBackground"></div>
-        <h2 class = "titleTextBlack">JAPAN</h2>
-        <h3 class = "titleTextBlack">Hokkaido</h3>
-      </div>
+          function refreshPage() {
+            window.location = window.location;
+          }
+  			</script>
 
-      <div id="USA" onclick="mf(this)" class = "blurContainer">
-        <div class = "hawaii blurBackground"></div>
-        <h2  class = "titleTextBlack">USA</h2>
-        <h3  class = "titleTextBlack">Hawaii</h3>
-      </div>
+        <div id="Korea" onclick="mf(this)" class="blurContainer">
+          <div class="busan blurBackground"></div>
+  			  <h2 class="titleTextWhite">KOREA</h2>
+          <h3 class="titleTextWhite">Busan</h3>
+          <h4 class="dateTextWhite">8/2~8/5</h4>
+        </div>
 
-      <div id="India" onclick="mf(this)" class = "blurContainer">
-        <div class = "tamilnadu blurBackground"></div>
-        <h2 class = "titleTextBlack">INDIA</h2>
-        <h3 class = "titleTextBlack">Tamilnadu</h3>
-      </div>
+        <div id="USA" onclick="mf(this)" class = "blurContainer">
+          <div class="losangeles blurBackground"></div>
+          <h2 class="titleTextBlack">USA</h2>
+          <h3 class="titleTextBlack">Los Angeles</h3>
+          <h4 class="dateTextBlack">1/3~1/9</h4>
+        </div>
 
-      <div id="Thailand" onclick="mf(this)" class = "blurContainer">
-        <div class = "pataya blurBackground"></div>
-        <h2 class = "titleTextBlack">THAILAND</h2>
-        <h3 class = "titleTextBlack">Pataya</h3>
-      </div>
+        <div id="Japan" onclick="mf(this)" class = "blurContainer">
+          <div class="hokkaido blurBackground"></div>
+          <h2 class="titleTextBlack">JAPAN</h2>
+          <h3 class="titleTextBlack">Hokkaido</h3>
+          <h4 class="dateTextBlack">7/7~7/19</h4>
+        </div>
+
+        <div id="USA" onclick="mf(this)" class = "blurContainer">
+          <div class="hawaii blurBackground"></div>
+          <h2 class="titleTextBlack">USA</h2>
+          <h3 class="titleTextBlack">Hawaii</h3>
+          <h4 class="dateTextBlack">4/17~4/23</h4>
+        </div>
+
+        <div id="India" onclick="mf(this)" class = "blurContainer">
+          <div class="tamilnadu blurBackground"></div>
+          <h2 class="titleTextBlack">INDIA</h2>
+          <h3 class="titleTextBlack">Tamilnadu</h3>
+          <h4 class="dateTextBlack">9/29~10/8</h4>
+        </div>
+
+        <div id="Thailand" onclick="mf(this)" class = "blurContainer">
+          <div class="pataya blurBackground"></div>
+          <h2 class="titleTextBlack">THAILAND</h2>
+          <h3 class="titleTextBlack">Pataya</h3>
+          <h4 class="dateTextBlack">12/4~12/31</h4>
+        </div>
 
 			</div>
+
+      <p id="by_">JYP and YSL</p>
+
+
 		</div>
 	</body>
 </html>

@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Andada" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gafata" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+		<link rel="stylesheet" href="create.css">
+	</head> 
+
+	<body>
+
+		<div class="topbody">
+      <img class="topbody__background" src="background.jpg">
+      <h1 class="topbody__title" onclick="goHome()">Travel Diary</h1>
+    </div>
+
+		<div class="formTab">
+			<p>Enter the city and country,<br>then click "Submit"</p>
+
+			<form id="frm" action="/action_page.php">
+			  <input type="text" name="cityname" placeholder="CITY"><br>
+			  <input type="text" name="countryname" placeholder="COUNTRY"><br>
+			  <input type="text" name="date" placeholder="DATE"><br>
+			  <input type="button" onclick="myFunction()" value="Submit">
+			</form>
+		</div>
+
+		<script>
+		function myFunction() {
+			var form = document.getElementById("frm");
+			var city = form.elements[0].value;
+			var country = form.elements[1].value.toUpperCase();
+			if (city=="")
+				alert("Enter City");
+			else if (country=="")
+				alert("Enter Country");
+			else
+			{
+				var url = "map_page.html?country=" + country + "&city=" + city;
+				window.location = url;
+			}
+		}
+
+		function goHome() {
+			window.location = "main_page.html";
+		}
+		</script>
+
+
+
+
+	</body>
+</html>

@@ -1,8 +1,3 @@
-.header {
-	position: relative;
-	height: 12%;
-}
-
 #homeLogo {
   font-size: 2em;
   color: black;
@@ -15,13 +10,47 @@
   transform: translate(-50%, 0%);
 }
 
+.locationBar {
+	display: block;
+	height: 6%;
+}
+
 #countryName {
+	margin-left: 12px;
+	margin-top: 0;
+	font-size: 24pt;
 	position: absolute;
 	font-family: 'Shadows Into Light', cursive;
 }
 
 #googleMap {
+	display: block;
 	margin left:20px;
 	width:100%;
-	height:85%;
+	height:82%;
+}
+
+.topbody {
+	display: block;
+  position: relative;
+  width: 100%;
+  height: 12%;
+  overflow: hidden;
+ }
+
+.topbody__background {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  top: -25%;
+	filter: blur(6px);
+}
+
+.topbody__title {
+  position: relative;
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  font-family: 'Andada', serif;
+  cursor: hand;
 }
