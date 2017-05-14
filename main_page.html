@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Andada" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gafata" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+
+		<div class="topbody">
+      <img class="topbody__background" src="v.jpg">
+      <h1 class="topbody__title">Travel Diary</h1>
+      <div id="wrap">
+  			<form action="" autocomplete="on">
+ 			 		<input id="search" name="search" type="text" placeholder="search for travel">
+ 			 		<input id="search_submit" type="submit">
+  			</form>
+			</div>
+    </div>
+
+		<div class = "mainbody">
+			<div class = "container">
+
+			<script type="text/javascript">
+				function mf(div) {
+					var url = "map_page.html?country=" + div.children[1].innerHTML + "&city=" + div.children[2].innerHTML;
+					window.location = url;
+				}
+			</script>
+
+      <div id="Korea" onclick="mf(this)" class="blurContainer">
+        <div class = "busan blurBackground"></div>
+			  <h2 class="titleTextWhite">KOREA</h2>
+        <h3 class="titleTextWhite">Busan</h3>
+      </div>
+
+      <div id="USA" onclick="mf(this)" class = "blurContainer">
+        <div class = "losangeles blurBackground"></div>
+        <h2 class = "titleTextBlack">USA</h2>
+        <h3 class = "titleTextBlack">Los Angeles</h3>
+      </div>
+
+      <div id="Japan" onclick="mf(this)" class = "blurContainer">
+        <div class = "hokkaido blurBackground"></div>
+        <h2 class = "titleTextBlack">JAPAN</h2>
+        <h3 class = "titleTextBlack">Hokkaido</h3>
+      </div>
+
+      <div id="USA" onclick="mf(this)" class = "blurContainer">
+        <div class = "hawaii blurBackground"></div>
+        <h2  class = "titleTextBlack">USA</h2>
+        <h3  class = "titleTextBlack">Hawaii</h3>
+      </div>
+
+      <div id="India" onclick="mf(this)" class = "blurContainer">
+        <div class = "tamilnadu blurBackground"></div>
+        <h2 class = "titleTextBlack">INDIA</h2>
+        <h3 class = "titleTextBlack">Tamilnadu</h3>
+      </div>
+
+      <div id="Thailand" onclick="mf(this)" class = "blurContainer">
+        <div class = "pataya blurBackground"></div>
+        <h2 class = "titleTextBlack">THAILAND</h2>
+        <h3 class = "titleTextBlack">Pataya</h3>
+      </div>
+
+			</div>
+		</div>
+	</body>
+</html>
